@@ -1,8 +1,8 @@
 #root {
-
+width:auto;
   margin: 0px;
   text-align: center;
- background-color:#8c2c2c
+ background-color:RGB(83, 33, 43)
 }
 
 *{margin:0px}
@@ -12,15 +12,15 @@ h1 {
   font-family: 'VALORANT';
   line-height: 1.1;
   background-color: rgb(23, 21, 21);
-  padding-top:1em;
-  padding-bottom:1em;
+  padding-top:0.5em;
+  padding-bottom:0.5em;
 }
 
 /*avatars*/ 
 .avatarCarre {
   width: 10vh;
   height: 10vh;
-  border: solid 1px rgb(109, 8, 8);
+  border: solid 1px rgb(10, 94, 34);
   margin-left:0.2em;
   margin-bottom:0.2em;
   background-color: black;
@@ -29,22 +29,42 @@ h1 {
 
 .barreAvatars {  display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content:center;
-  width:90vh;
-  margin:auto
+  height:43vh;
+  border: solid 2px rgb(13, 114, 14)
+
 }
 
-.clicked {
-  background-color: red;
-}
+/*bans*/
 
+.bans {display:flex;
+  flex-direction: column;
+  height:43vh;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border: solid 2px RGB(253, 69, 86) }
+  
+.bansContainer {
+padding-left:0.5em}
 
 /*card*/ 
+
+
+.affichage {display:flex; 
+flex-direction:row;
+justify-content: center;
+align-items: center;
+gap:2vh;
+
+
+padding-bottom:2em}
+
 .gifAgent {max-height: 48vh;
-max-width: 45vh;}
+max-width: 35vh;}
 .imageAgent {height:45vh}
 
 .card{background-color: rgb(36, 31, 31);
@@ -52,21 +72,20 @@ display:flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-margin:auto;
 padding-top:1em;
 margin-top:1em;
-width:90vh;
+width:80vh;
 margin-bottom: 1em; }
 
 .cardElements{display:flex;
-justify-content: center;
+justify-content: space-around;
 flex-wrap: wrap;
 flex-direction: row;
 align-items:center;
-width: 90vh;
+width: 80vh;
 height:50vh;
 margin:auto;
-background-color: rgb(109, 8, 8);
+background-color: RGB(189, 57, 68)	;
 color: rgb(255, 245, 245);
 gap : 1em;
 margin-bottom: 1em;
@@ -75,8 +94,8 @@ h2 {font-family:"VALORANT"}
 /*bouton*/
 
 button{margin-top:1em;
-  background-color: #c30808;
-  color: #fff;
+  background-color: #9f2d2d 	;
+  color: RGB(83, 33, 43);
   font-family: 'VALORANT';
   font-size: 24px;
   font-weight: 800;
@@ -86,11 +105,16 @@ button{margin-top:1em;
   border: 0px solid #8c2c2c;
   border-radius: 100px;
   display: inline-block;
-  box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.5);
  }
  button:hover{
-  background-color: #ca5151;
+  background-color: #ca5151 ;
  }
 button:active{
   transform: scale(0.95);
  }
+
+.bouttonsContainer {display:flex;
+flex-direction: row;
+justify-content: space-evenly;
+margin-bottom:2em}
+

@@ -1,12 +1,13 @@
 
 
+
 function BouttonChoix({choixAgent,agentsList}) {
 
 
   return (
     
     <div>
-      <button onClick={choixAgent}> Click  🤞  </button>
+      <button onClick={choixAgent}> Lezgo 🤞  </button>
     </div>
   );
 }

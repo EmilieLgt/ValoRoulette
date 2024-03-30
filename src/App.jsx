@@ -219,49 +219,80 @@ function App() {
     },
   ];
 
-  const [indexAgent, setIndexAgent] = useState(0);
+  const [indexAgent, setIndexAgent] = useState(null);
+  const [listecomplete, setListeComplete] = useState(agentsList);
+  const [selectedAvatars, setSelectedAvatars] = useState([]);
+  const [showSelectedCard, setShowSelectedCard] = useState(false);
+  const [selectedAvatarsBackup, setSelectedAvatarsBackup] = useState([]);
 
   const randomAgent = () => {
-    return Math.floor(Math.random() * agentsList.length);
+    return Math.floor(Math.random() * listecomplete.length);
   };
 
   const choixAgent = () => {
-    setIndexAgent(randomAgent);
+    const newIndexAgent = randomAgent();
+    setIndexAgent(newIndexAgent);
+    setShowSelectedCard(true);
   };
 
-   const [listecomplete, setListeComplete] = useState(agentsList);
-  const [agentIdToDelete, setIdAgentToDelete] = useState();
-/*
-  useEffect(() => {
-    if (!agentIdToDelete) {
-
-      // d'abord il faut chercher l'index de l'id de l'agent selectionné, pour que cet index soit l'index qui supprime dans le tableau
- let newArray = [...listecomplete];
- newArray.splice(agentIdToDelete, 1)
-      setListeComplete(newArray);
+  const removeAgent = (agentId) => {
+    const agentToRemove = listecomplete.find((agent) => agent.id === agentId);
+    if (agentToRemove) {
+      setSelectedAvatars([...selectedAvatars, agentToRemove]);
+      const newList = listecomplete.filter((agent) => agent.id !== agentId);
+      setListeComplete(newList);
+      setShowSelectedCard(false);
     }
-  }, [agentIdToDelete]);
+  };
 
-*/
+  const handleCardClick = () => {
+    setShowSelectedCard(false);
+  };
+
+  const resetPage = () => {
+    setIndexAgent(null);
+    setListeComplete(agentsList); // Réinitialise la liste complète avec la liste d'origine
+    setSelectedAvatars([]);
+    setShowSelectedCard(false);
+  };
+
   return (
     <>
-      
-        <h1>Valoroulette</h1>
-   
+      <h1>Valoroulette</h1>
 
-      <BouttonChoix agentsList={listecomplete} choixAgent={choixAgent} />
+      <section className="bouttonsContainer">
+        <BouttonChoix agentsList={listecomplete} choixAgent={choixAgent} />
+        <button className="bouttonReset" onClick={resetPage}>Reset ❌</button>
+      </section>
 
-      <section className="agentChoisi">
-        <CardsPlayer agentsList={listecomplete} indexAgent={indexAgent} />
-      </section> 
+      <section className="affichage">
+        <section>
+          <h2>Agents</h2>
+          <div className="barreAvatars">
+            <AvatarAgents
+              agentsList={listecomplete}
+              removeAgent={removeAgent}
+            />
+          </div>
+        </section>
+        
+        {showSelectedCard && indexAgent !== null ? (
+          <CardsPlayer
+            agentsList={listecomplete}
+            indexAgent={indexAgent}
+            onClick={handleCardClick}
+          />
 
-      <section className="barreAvatars">
-        <AvatarAgents
-          agentsList={listecomplete}
-          setIdAgentToDelete={setIdAgentToDelete}
-        />
+        ) : null}
+        <div className="bansContainer">
+          <h2>Bans</h2>
+          <div className="bans">
+            <AvatarAgents agentsList={selectedAvatars} />
+          </div>
+        </div>
       </section>
     </>
   );
 }
+
 export default App;
