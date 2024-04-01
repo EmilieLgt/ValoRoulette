@@ -1,4 +1,3 @@
-$ vi package.json
 {
   "name": "new-project",
   "private": true,
