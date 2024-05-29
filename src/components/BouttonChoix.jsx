@@ -1,13 +1,12 @@
+/* eslint-disable react/prop-types */
 
-
-
-function BouttonChoix({choixAgent,agentsList}) {
+function BouttonChoix({choixAgent}) {
 
 
   return (
     
     <div>
-      <button onClick={choixAgent}> Lezgo 🤞  </button>
+      <button onClick={choixAgent}> Roll 🤞  </button>
     </div>
   );
 }

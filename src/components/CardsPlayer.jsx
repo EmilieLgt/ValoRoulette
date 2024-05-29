@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from "react";
+/* eslint-disable react/prop-types */
 
 
 function CardsPlayer ({indexAgent, agentsList}){
@@ -10,9 +9,9 @@ function CardsPlayer ({indexAgent, agentsList}){
     <div className='card' >
       <h2>{agentsList[indexAgent].name}</h2> 
       <div className="cardElements">
-      <img className="imageAgent"src={agentsList[indexAgent].image} alt={agentsList[indexAgent].name} />
-      
-      <img className="gifAgent"src={agentsList[indexAgent].gif}/>
+      <img className="imageAgent" src={agentsList[indexAgent].image} alt={agentsList[indexAgent].name} />
+      <button> <a target="blank" href={agentsList[indexAgent].link}>HELP
+      </a></button>
       </div>
     </div>
   );

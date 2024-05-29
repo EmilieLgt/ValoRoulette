@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 function AvatarAgents({ agentsList, removeAgent, setSelectedAgentIndex }) {
   const handleAvatarClick = (agentId) => {
     removeAgent(agentId);
@@ -5,7 +6,7 @@ function AvatarAgents({ agentsList, removeAgent, setSelectedAgentIndex }) {
   };
 
   if (!agentsList || agentsList.length === 0) {
-    return <div>No agent</div>;
+    return <p className="error-message">No ban yet</p>;
   }
 
   return (
