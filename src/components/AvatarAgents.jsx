@@ -11,14 +11,19 @@ function AvatarAgents({ agentsList, removeAgent, setSelectedAgentIndex }) {
 
   return (
     <>
-      {agentsList.map((agent) => (
-        <img
-          key={agent.name}
-          onClick={() => handleAvatarClick(agent.id)} // Utilisez la nouvelle fonction handleAvatarClick
-          className="avatarCarre"
-          src={agent.avatar}
-          alt={agent.name}
-        />
+
+      {agentsList.map((agent) => (  <div 
+          key={agent.name} 
+          className="avatar-container"
+          onClick={() => handleAvatarClick(agent.id)}
+        >
+          <img
+            src={agent.avatar}
+            alt={agent.name}
+            className="avatarCarre"
+          />
+          <div className="avatarCarre-hover-img"> X</div>
+        </div>
       ))}
     </>
   );

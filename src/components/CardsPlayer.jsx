@@ -7,8 +7,9 @@ function CardsPlayer ({indexAgent, agentsList}){
   }
   return (
     <div className='card' >
-      <h2>{agentsList[indexAgent].name}</h2> 
+ 
       <div className="cardElements">
+      <h2>{agentsList[indexAgent].name}</h2> 
       <img className="imageAgent" src={agentsList[indexAgent].image} alt={agentsList[indexAgent].name} />
       <button> <a target="blank" href={agentsList[indexAgent].link}>HELP
       </a></button>

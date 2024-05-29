@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import AvatarAgents from "./components/AvatarAgents";
+import AvatarBanned from "./components/AvatarsBanned";
 import CardsPlayer from "./components/CardsPlayer";
 import BouttonChoix from "./components/BouttonChoix";
 
@@ -289,6 +290,7 @@ function App() {
     }
   };
 
+
   const handleCardClick = () => {
     setShowSelectedCard(false);
   };
@@ -306,9 +308,18 @@ function App() {
 
       <section className="bouttonsContainer">
         <BouttonChoix agentsList={listecomplete} choixAgent={choixAgent} />
-        <button className="bouttonReset" onClick={resetPage}>Reset ❌</button>
+       
+        
       </section>
+      {showSelectedCard && indexAgent !== null ? (
+          <CardsPlayer
+            agentsList={listecomplete}
+            indexAgent={indexAgent}
+            onClick={handleCardClick}
+          />
 
+        ) : null}
+    
       <section className="affichage">
         <section>
           <h2>Agents</h2>
@@ -320,21 +331,20 @@ function App() {
           </div>
         </section>
         
-        {showSelectedCard && indexAgent !== null ? (
-          <CardsPlayer
-            agentsList={listecomplete}
-            indexAgent={indexAgent}
-            onClick={handleCardClick}
-          />
-
-        ) : null}
+    
         <div className="bansContainer">
-          <h2>Bans</h2>
-          <div className="bans">
-            <AvatarAgents agentsList={selectedAvatars} />
-          </div>
+        
+          {agentsList && agentsList.length > 0 ?  <><h2>Bans</h2> <div className="bans">
+            <AvatarBanned agentsList={selectedAvatars} /> 
+          </div> </>  : null }
+          <button className="bouttonReset" onClick={resetPage}>Reset ❌</button>
         </div>
+
+       
+      
       </section>
+
+    
     </>
   );
 }
