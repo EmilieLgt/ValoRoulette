@@ -1,8 +1,7 @@
 /* eslint-disable react/prop-types */
-function AvatarAgents({ agentsList, removeAgent, setSelectedAgentIndex }) {
+function AvatarAgents({ agentsList, removeAgent }) {
   const handleAvatarClick = (agentId) => {
-    removeAgent(agentId);
-    setSelectedAgentIndex(null); // Ne pas mettre à jour l'index de l'agent sélectionné
+    removeAgent(agentId); // Ne pas mettre à jour l'index de l'agent sélectionné
   };
 
   if (!agentsList || agentsList.length === 0) {
@@ -11,17 +10,13 @@ function AvatarAgents({ agentsList, removeAgent, setSelectedAgentIndex }) {
 
   return (
     <>
-
-      {agentsList.map((agent) => (  <div 
-          key={agent.name} 
+      {agentsList.map((agent) => (
+        <div
+          key={agent.name}
           className="avatar-container"
           onClick={() => handleAvatarClick(agent.id)}
         >
-          <img
-            src={agent.avatar}
-            alt={agent.name}
-            className="avatarCarre"
-          />
+          <img src={agent.avatar} alt={agent.name} className="avatarCarre" />
           <div className="avatarCarre-hover-img"> X</div>
         </div>
       ))}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import AvatarAgents from "./components/AvatarAgents";
+import AvatarPrevious from "./components/AvatarPrevious";
 import AvatarBanned from "./components/AvatarsBanned";
 import CardsPlayer from "./components/CardsPlayer";
 import BouttonChoix from "./components/BouttonChoix";
@@ -15,7 +16,7 @@ function App() {
       avatar:
         "https://www.esports.net/wp-content/uploads/2022/08/Valorant-Astra.png",
       gif: "https://i.pinimg.com/originals/22/6a/ce/226ace5418735107b3711dacb27e1014.gif",
-      link: "https://mobalytics.gg/valorant/agent/astra/overview"
+      link: "https://mobalytics.gg/valorant/agent/astra/overview",
     },
     {
       id: 1,
@@ -25,7 +26,7 @@ function App() {
       avatar:
         "https://server.blix.gg/imgproxy/RA8nvfnHAmKAM4XETPnuPVAn1TDGMhPlghrxgJ-d9zs/rs:fit:260:260:0/g:no/aHR0cDovL21pbmlvOjkwMDAvaW1hZ2VzLzAzYWViNTllODRjNDQ4N2U4ZmMyYWQ5NTQ3M2FjZTVmLnBuZw.webp",
       gif: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ9c9t5xlr5LPO_Tvgy4TGmkSrtJtIJZ6rVkiz7hHXkWB2tN4s2ExBwmY0lSz4Zlf1lSQ&usqp=CAU",
-      link : "https://mobalytics.gg/valorant/agent/breach/overview"
+      link: "https://mobalytics.gg/valorant/agent/breach/overview",
     },
     {
       id: 2,
@@ -35,7 +36,7 @@ function App() {
       avatar:
         "https://static.valorantstats.xyz/agent-headshots/brimstone-headshot.png",
       gif: "https://y.yarn.co/8511fd28-de8b-4964-806a-9d3942777b6a_text.gif",
-      link : "https://mobalytics.gg/valorant/agent/brimstone/overview"
+      link: "https://mobalytics.gg/valorant/agent/brimstone/overview",
     },
     {
       id: 3,
@@ -45,8 +46,7 @@ function App() {
       avatar:
         "https://static.valorantstats.xyz/agent-headshots/chamber-headshot.png",
       gif: "https://menace-theoriste.fr/wp-content/uploads/2017/04/angry-dwight.gif",
-      link : "https://mobalytics.gg/valorant/agent/chamber/overview"
-
+      link: "https://mobalytics.gg/valorant/agent/chamber/overview",
     },
     {
       id: 4,
@@ -55,8 +55,7 @@ function App() {
         "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt8e3123f0fc29db2a/65fddcd7fc58c8422b142571/E8A2_Web_Clove_key_Art.png",
       avatar: "https://pbs.twimg.com/media/GJd3uLZXoAAovBW.png",
       gif: "https://y.yarn.co/3d316ee7-5c73-47fd-b260-657a593ddfed_text.gif",
-      link : "https://mobalytics.gg/valorant/agent/clove/overview"
-
+      link: "https://mobalytics.gg/valorant/agent/clove/overview",
     },
     {
       id: 5,
@@ -66,8 +65,7 @@ function App() {
       avatar:
         "https://static.valorantstats.xyz/agent-headshots/cypher-headshot.png",
       gif: "https://i.gifer.com/origin/82/824bc858cca593e0679076bf283630c6_w200.gif",
-      link : "https://mobalytics.gg/valorant/agent/cypher/overview"
-
+      link: "https://mobalytics.gg/valorant/agent/cypher/overview",
     },
     {
       id: 6,
@@ -77,8 +75,7 @@ function App() {
       avatar:
         "https://static.valorantstats.xyz/agent-headshots/deadlock-headshot.png",
       gif: "https://data.textstudio.com/output/sample/animated/3/6/5/7/i-m-bored-2-17563.gif",
-      link : "https://mobalytics.gg/valorant/agent/deadlock/overview"
-
+      link: "https://mobalytics.gg/valorant/agent/deadlock/overview",
     },
     {
       id: 7,
@@ -88,8 +85,7 @@ function App() {
       avatar:
         "https://cdn.gameleap.com/images/articles/art_VezJSvgZdb/art-img_MFM5vhe9W/1x.webp",
       gif: "https://i.gifer.com/ACur.gif",
-      link : "https://mobalytics.gg/valorant/agent/fade/overview"
-
+      link: "https://mobalytics.gg/valorant/agent/fade/overview",
     },
     {
       id: 8,
@@ -99,8 +95,7 @@ function App() {
       avatar:
         "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png",
       gif: "https://i.makeagif.com/media/11-15-2023/lef35_.gif",
-      link : "https://mobalytics.gg/valorant/agent/gekko/overview"
-
+      link: "https://mobalytics.gg/valorant/agent/gekko/overview",
     },
     {
       id: 9,
@@ -109,9 +104,8 @@ function App() {
         "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt81e8a3e8c7beeaf3/634894a15e281916980f655b/Harbor_KeyArt-web.png",
       avatar:
         "https://static.valorantstats.xyz/agent-headshots/harbor-headshot.png",
-      gif: "https://www.surfertoday.com/images/stories/surfingmeme2.jpg",      
-      link : "https://mobalytics.gg/valorant/agent/harbor/overview",
-
+      gif: "https://www.surfertoday.com/images/stories/surfingmeme2.jpg",
+      link: "https://mobalytics.gg/valorant/agent/harbor/overview",
     },
     {
       id: 10,
@@ -120,8 +114,7 @@ function App() {
         "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt34e30d5669e7309c/653add3080274d040a37d656/ISO_KeyArt_Final.png",
       avatar: "https://pbs.twimg.com/media/F9eyE2mWwAA-weq.png",
       gif: "https://risibank.fr/cache/medias/0/24/2421/242135/full.gif",
-      link : "https://mobalytics.gg/valorant/agent/iso/overview"
-
+      link: "https://mobalytics.gg/valorant/agent/iso/overview",
     },
     {
       id: 11,
@@ -131,8 +124,7 @@ function App() {
       avatar:
         "https://static.valorantstats.xyz/agent-headshots/jett-headshot.png",
       gif: "https://i.makeagif.com/media/8-08-2014/IYMUGB.gif",
-      link : "https://mobalytics.gg/valorant/agent/jett/overview"
-
+      link: "https://mobalytics.gg/valorant/agent/jett/overview",
     },
     {
       id: 12,
@@ -142,8 +134,7 @@ function App() {
       avatar:
         "https://static.valorantstats.xyz/agent-headshots/kayo-headshot.png",
       gif: "https://i.ytimg.com/vi/PFM6TjJ-UCY/maxresdefault.jpg",
-      link : "https://mobalytics.gg/valorant/agent/kayo/overview"
-
+      link: "https://mobalytics.gg/valorant/agent/kayo/overview",
     },
     {
       id: 13,
@@ -153,8 +144,7 @@ function App() {
       avatar:
         "https://server.blix.gg/imgproxy/qMrBHZax8Yg9k_6Db3-Ddi3L2IXC9hCM0IdTOSwVHFo/rs:fit:260:260:0/g:no/aHR0cDovL21pbmlvOjkwMDAvaW1hZ2VzLzY5MTlhZjk5ZTNmNTRjNWQ5OTNhMGRlMDU4NDY0YmZjLnBuZw.webp",
       gif: "https://ih0.redbubble.net/image.1098622247.1231/raf,360x360,075,t,fafafa:ca443f4786.jpg",
-      link : "https://mobalytics.gg/valorant/agent/killjoy/overview"
-
+      link: "https://mobalytics.gg/valorant/agent/killjoy/overview",
     },
     {
       id: 14,
@@ -164,8 +154,7 @@ function App() {
       avatar:
         "https://static.valorantstats.xyz/agent-headshots/neon-headshot.png",
       gif: "https://media.tenor.com/DacxJ7g3oKYAAAAC/screaming-internally.gif",
-      link : "https://mobalytics.gg/valorant/agent/neon/overview"
-
+      link: "https://mobalytics.gg/valorant/agent/neon/overview",
     },
     {
       id: 15,
@@ -174,8 +163,7 @@ function App() {
         "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt4e5af408cc7a87b5/5eb7cdc17bedc8627eff8deb/V_AGENTS_587x900_Omen.png",
       avatar: "https://lineupsvalorant.com/static/agents/Omen.webp",
       gif: "https://media.tenor.com/2rJfZdIeSHUAAAAM/i-am-confused.gif",
-      link : "https://mobalytics.gg/valorant/agent/omen/overview"
-
+      link: "https://mobalytics.gg/valorant/agent/omen/overview",
     },
     {
       id: 16,
@@ -185,8 +173,7 @@ function App() {
       avatar:
         "https://server.blix.gg/imgproxy/p4cxRUwKiFD9AUudz2wiXGZ25UQaAO7XU--tys892j8/rs:fit:260:260:0/g:no/aHR0cDovL21pbmlvOjkwMDAvaW1hZ2VzLzdhMDlmOTVlOTRiMDRmNmRiMGE4YWJjNTQzMWNiMzNhLnBuZw.webp",
       gif: "https://media.tenor.com/skpDDWZ59vQAAAAM/road-to-plat-valorant-phoenix-flash-valorant.gif",
-      link : "https://mobalytics.gg/valorant/agent/phoenix/overview"
-
+      link: "https://mobalytics.gg/valorant/agent/phoenix/overview",
     },
     {
       id: 17,
@@ -195,8 +182,7 @@ function App() {
         "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt6fef56a8182d0a81/5ebf2c2798f79d6925dbd6b4/V_AGENTS_587x900_ALL_Raze_2.png",
       avatar: "https://lineups.fun/static/media/icon.01d6aff60359bd300d06.png",
       gif: "https://media0.giphy.com/media/fjyGFXQyf3AJWB6dqc/giphy.gif?cid=6c09b952s25so3343pqdd6p0yxkp3blqj6peo2prl2u2ibou&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g",
-      link : "https://mobalytics.gg/valorant/agent/raze/overview"
-
+      link: "https://mobalytics.gg/valorant/agent/raze/overview",
     },
     {
       id: 18,
@@ -206,8 +192,7 @@ function App() {
       avatar:
         "https://server.blix.gg/imgproxy/AS1NkTDy-d6NUEFNmWPJ9m0q0koI_S96-j-nLX6yiTo/rs:fit:260:260:0/g:no/aHR0cDovL21pbmlvOjkwMDAvaW1hZ2VzLzIwZDQwNDM5ZDY3NTQwOTU5YTE2OTRjZTIxZGU1MmQ1LnBuZw.webp",
       gif: "https://media0.giphy.com/media/HJLrMf7wslzIUuDvjC/200w.gif?cid=6c09b95239l421acbba2tio1yopb0qfhzx8gnv18lq66swty&ep=v1_gifs_search&rid=200w.gif&ct=g",
-      link : "https://mobalytics.gg/valorant/agent/reyna/overview"
-
+      link: "https://mobalytics.gg/valorant/agent/reyna/overview",
     },
     {
       id: 19,
@@ -217,8 +202,7 @@ function App() {
       avatar:
         "https://tiermaker.com/images/template_images/2022/15884532/valorant-agents-w-deadlock-june-2023-15884532/sage-headshot.png",
       gif: "https://pbs.twimg.com/media/EvWD8LlWYAYKHif.jpg",
-      link : "https://mobalytics.gg/valorant/agent/sage/overview"
-
+      link: "https://mobalytics.gg/valorant/agent/sage/overview",
     },
     {
       id: 20,
@@ -228,8 +212,7 @@ function App() {
       avatar:
         "https://static.valorantstats.xyz/agent-headshots/skye-headshot.png",
       gif: "https://media.tenor.com/3m-UNCbquwsAAAAM/valorant-valorant-skye.gif",
-      link : "https://mobalytics.gg/valorant/agent/skye/overview"
-
+      link: "https://mobalytics.gg/valorant/agent/skye/overview",
     },
     {
       id: 21,
@@ -238,8 +221,7 @@ function App() {
         "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltf11234f4775729b7/5ebf2c275e73766852c8d5d4/V_AGENTS_587x900_ALL_Sova_2.png",
       avatar: "https://schoch.co.nz/img/Sova_icon.png",
       gif: "https://i.kym-cdn.com/entries/icons/facebook/000/034/772/Untitled-1.jpg",
-      link : "https://mobalytics.gg/valorant/agent/sova/overview"
-
+      link: "https://mobalytics.gg/valorant/agent/sova/overview",
     },
     {
       id: 22,
@@ -249,8 +231,7 @@ function App() {
       avatar:
         "https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/displayicon.png",
       gif: "https://i.pinimg.com/originals/bf/25/c1/bf25c153dfeab1d8e8217e9778f32eaa.gif",
-      link : "https://mobalytics.gg/valorant/agent/viper/overview"
-
+      link: "https://mobalytics.gg/valorant/agent/viper/overview",
     },
     {
       id: 23,
@@ -260,8 +241,7 @@ function App() {
       avatar:
         "https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/displayicon.png",
       gif: "https://pbs.twimg.com/media/Fx3vqg_XsAAOhdE.jpg",
-      link : "https://mobalytics.gg/valorant/agent/yoru/overview"
-
+      link: "https://mobalytics.gg/valorant/agent/yoru/overview",
     },
   ];
 
@@ -269,15 +249,22 @@ function App() {
   const [listecomplete, setListeComplete] = useState(agentsList);
   const [selectedAvatars, setSelectedAvatars] = useState([]);
   const [showSelectedCard, setShowSelectedCard] = useState(false);
+  const [lastAgents, setLastAgents] = useState([]);
 
+  // chiffre random entre 0 et taille de la liste
   const randomAgent = () => {
     return Math.floor(Math.random() * listecomplete.length);
   };
 
+  // fonction sur le bouton de roll qui permet de créer un index random, stocker cette index, afficher la card de l'agent sélectionné,
+  // rajouter l'index dans le tableau des agents sélectionnés avant.
   const choixAgent = () => {
     const newIndexAgent = randomAgent();
     setIndexAgent(newIndexAgent);
     setShowSelectedCard(true);
+    setLastAgents([...lastAgents, newIndexAgent]);
+    console.log(`là : ${lastAgents}`);
+    console.log(newIndexAgent);
   };
 
   const removeAgent = (agentId) => {
@@ -290,7 +277,6 @@ function App() {
     }
   };
 
-
   const handleCardClick = () => {
     setShowSelectedCard(false);
   };
@@ -300,6 +286,7 @@ function App() {
     setListeComplete(agentsList); // Réinitialise la liste complète avec la liste d'origine
     setSelectedAvatars([]);
     setShowSelectedCard(false);
+    setLastAgents([]);
   };
 
   return (
@@ -308,20 +295,20 @@ function App() {
 
       <section className="bouttonsContainer">
         <BouttonChoix agentsList={listecomplete} choixAgent={choixAgent} />
-       
-        
       </section>
-      {showSelectedCard && indexAgent !== null ? (
+      <section className="cardAndPrevious">
+        <AvatarPrevious lastAgents={lastAgents} agentsList={agentsList} />
+        {showSelectedCard && indexAgent !== null ? (
           <CardsPlayer
             agentsList={listecomplete}
             indexAgent={indexAgent}
             onClick={handleCardClick}
+            selectedAvatars={selectedAvatars}
           />
-
         ) : null}
-    
+      </section>
       <section className="affichage">
-        <section>
+        <section className="agents-container">
           <h2>Agents</h2>
           <div className="barreAvatars">
             <AvatarAgents
@@ -330,21 +317,21 @@ function App() {
             />
           </div>
         </section>
-        
-    
+
         <div className="bansContainer">
-        
-          {agentsList && agentsList.length > 0 ?  <><h2>Bans</h2> <div className="bans">
-            <AvatarBanned agentsList={selectedAvatars} /> 
-          </div> </>  : null }
-          <button className="bouttonReset" onClick={resetPage}>Reset ❌</button>
+          {agentsList && agentsList.length > 0 ? (
+            <>
+              <h2>Bans</h2>{" "}
+              <div className="bans">
+                <AvatarBanned agentsList={selectedAvatars} />
+              </div>{" "}
+            </>
+          ) : null}
+          <button className="bouttonReset" onClick={resetPage}>
+            Reset ❌
+          </button>
         </div>
-
-       
-      
       </section>
-
-    
     </>
   );
 }
